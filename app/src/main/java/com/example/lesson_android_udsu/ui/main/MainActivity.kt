@@ -15,10 +15,10 @@ class MainActivity : BaseActivity<MainViewModel> (MainViewModel::class) {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        val textView = findViewById<TextView>(R.id.textView)
+        //val textView = findViewById<TextView>(R.id.textView)
 
         viewModel.userList.observe {
-            textView.text = it
+            findViewById<TextView>(R.id.textView).text = it.toString()
         }
 
         val button: Button = findViewById(R.id.buttonList)
